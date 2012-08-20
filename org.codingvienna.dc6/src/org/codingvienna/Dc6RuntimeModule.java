@@ -3,10 +3,6 @@
  */
 package org.codingvienna;
 
-import org.codingvienna.hack.DC6ResourceSet;
-import org.codingvienna.hack.DC6SynchronizedXtextResourceSet;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.xtext.resource.XtextResourceSet;
 
 /**
  * Use this class to register components to be used at runtime / without the
@@ -14,11 +10,4 @@ import org.eclipse.xtext.resource.XtextResourceSet;
  */
 public class Dc6RuntimeModule extends org.codingvienna.AbstractDc6RuntimeModule {
 
-	public Class<? extends ResourceSet> bindResourceSet() {
-		return DC6ResourceSet.class;
-	}
-
-	public Class<? extends XtextResourceSet> bindXtextResourceSet() {
-		return DC6SynchronizedXtextResourceSet.class;
-	}
 }
