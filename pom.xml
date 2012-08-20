@@ -1,0 +1,193 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.codingvienna.samples</groupId>
+	<artifactId>org.codingvienna.samples.parent</artifactId>
+	<packaging>pom</packaging>
+	<name>CodingVienna samples parent</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Parent Project for coding vienna samples</description>
+	<url>http://codingvienna.org</url>
+
+	<properties>
+		<current-version>0.0.1-SNAPSHOT</current-version>
+		<next-release>0.0.2-SNAPSHOT</next-release>
+		<tycho-version>0.15.0</tycho-version>
+		<eclipse-p2>http://download.eclipse.org/releases/juno/201206080900/</eclipse-p2>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<orbit-p2>http://download.eclipse.org/tools/orbit/downloads/drops/R20120526062928/repository/</orbit-p2>
+		<vaadin-p2>http://vaadin.com/eclipse</vaadin-p2>
+		<vaadin.version>6.7.7</vaadin.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+			</plugin>
+		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.jvnet.wagon-svn</groupId>
+				<artifactId>wagon-svn</artifactId>
+				<version>1.9</version>
+			</extension>
+		</extensions>
+
+		<resources>
+			<resource>
+				<directory>./</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>feature.properties</include>
+					<include>plugin.properties</include>
+				</includes>
+				<targetPath>./</targetPath>
+			</resource>
+			<resource>
+				<directory>OSGI-INF/l10n</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>bundle.properties</include>
+				</includes>
+				<targetPath>OSGI-INF/l10n</targetPath>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<!-- enable tycho build -->
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-maven-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<extensions>true</extensions>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<resolver>p2</resolver>
+						<pomDependencies>consider</pomDependencies>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- these settings will be used for maven deployment to google code -->
+	<!-- <distributionManagement> <repository> <uniqueVersion>false</uniqueVersion> 
+		<id>googlecode</id> <url>svn:https://jwebsocket.googlecode.com/svn/repo</url> 
+		</repository> </distributionManagement> -->
+
+	<!-- define common dependencies used across all the modules of jWebSocket 
+		server -->
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>vaadin</id>
+			<url>http://maven.vaadin.com/vaadin</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>vaadin-addons</id>
+			<url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+		<repository>
+			<id>Eclipse</id>
+			<url>${eclipse-p2}</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>Orbit</id>
+			<url>${orbit-p2}</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>tycho-0.15.0-staged</id>
+			<url>https://oss.sonatype.org/content/repositories/orgeclipsetycho-115/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<organization>
+		<name>Codingvienna.org</name>
+		<url>www.codingvienna.org</url>
+	</organization>
+	<modules>
+		<module>org.codingvienna.dc6</module>
+		<module>org.codingvienna.dc6.tests</module>
+		<module>org.codingvienna.dc6.ui</module>
+		<module>org.codingvienna.dc6.bridge.web</module>
+		<module>org.codingvienna.dc6.feature</module>
+		<module>org.codingvienna.dc6.p2.repo.juno</module>
+		<module>org.codingvienna.dc6.p2.target.juno</module>
+		<module>org.codingvienna.dc6.osgi.servlet.ozonelayer.fragment</module>
+		<module>org.codingvienna.dc6.application</module>
+		<module>org.codingvienna.dc6.vaadin.widgetset.builder</module>
+		<module>org.codingvienna.dc6.vaadin.widgetset.fragment</module>
+	</modules>
+</project>
+
+
+</project>

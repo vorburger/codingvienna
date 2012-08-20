@@ -1,0 +1,48 @@
+grammar org.codingvienna.Dc6 with org.eclipse.xtext.common.Terminals
+
+generate dc6 "http://www.codingvienna.org/Dc6"
+
+Model:
+	canvas=Canvas;
+
+Canvas:
+	{Canvas}
+	'Canvas {'
+	(squares+=Square)*
+	'}';
+
+Square:
+	{Square}
+	'Square' '{'
+	(properties+=Properties)*
+	(squares+=Square)*
+	'}';
+
+Properties:
+	Color | Corner | Location | Caption | Size;
+
+Color:
+	{Color}
+	('color' color=ColorEnum);
+
+Corner:
+	{Corner}
+	('corner' corner=CornerEnum);
+
+Location:
+	{Location}
+	('location' x=INT ':' y=INT);
+
+Caption:
+	{Caption}
+	('caption' caption=STRING);
+
+Size:
+	{Size}
+	('size' width=INT ':' height=INT);
+
+enum ColorEnum:
+	RED='red' | GREEN='green' | BLUE='blue';
+
+enum CornerEnum:
+	ROUNDED='rounded' | DEFAULT='default';

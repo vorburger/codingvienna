@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" deactivate="shutdown" factory="vaadin.app" immediate="false" name="org.codingvienna.dc6.application">
+   <implementation class="org.codingvienna.dc6.application.MainApplication"/>
+</scr:component>

@@ -1,0 +1,61 @@
+Canvas {
+
+	Square {
+		location 60:30
+		size 400:270
+		caption "Hello vienna! How are you..."
+		corner default
+		color red
+		
+		Square {
+			location 30:60
+			size 300:70
+			caption "How are you?"
+			color blue
+		}
+		
+		Square {
+			location 30:150
+			size 300:70
+			caption "And a second too"
+			color green
+		}
+	}
+
+	Square {
+		location 130:330
+		size 400:350
+		caption "A day at DC vienna"
+		corner rounded
+		color blue
+		
+		Square {
+			location 45:60
+			size 300:100
+			caption "Sheet #4"
+			color red
+		}
+		
+		Square {
+			location 55:75
+			size 300:100
+			caption "Sheet #3"
+			color red
+			corner default
+		}
+		
+		Square {
+			location 65:90
+			size 300:100
+			caption "Sheet #2"
+			color red
+		}
+		
+		Square {
+			location 65:210
+			size 300:100
+			caption "Another sheet"
+			color green
+		}
+	}
+}

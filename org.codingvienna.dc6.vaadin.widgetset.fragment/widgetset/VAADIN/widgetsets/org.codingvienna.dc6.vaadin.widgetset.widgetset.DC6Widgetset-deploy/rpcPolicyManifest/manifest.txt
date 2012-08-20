@@ -1,0 +1,2 @@
+# Module org.codingvienna.dc6.vaadin.widgetset.widgetset.DC6Widgetset
+# RPC service class, partial path of RPC policy file

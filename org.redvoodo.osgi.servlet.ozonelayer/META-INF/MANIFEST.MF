@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ozonelayer
+Bundle-SymbolicName: org.redvoodo.osgi.servlet.ozonelayer
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: redVoodo.org
+Require-Bundle: com.vaadin;bundle-version="6.7.6",
+ org.atmosphere.atmosphere-compat-jbossweb;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-jetty;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-tomcat;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-tomcat7;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-weblogic;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-runtime;bundle-version="0.8.6",
+ javax.servlet;bundle-version="3.0.0",
+ org.redvoodo.vaadin.addon.dontpush.ozone.jars;bundle-version="0.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/osgiServlet.xml, OSGI-INF/atmosphereServlet.xml
+Import-Package: org.eclipse.jetty.util.component;version="8.1.0",
+ org.osgi.framework;version="1.7.0",
+ org.osgi.service.component,
+ org.redvoodo.osgi.pushosgi.common,
+ org.slf4j;version="1.6.1",
+ org.vaadin.dontpush.server
+Bundle-Activator: org.redvoodo.osgi.servlet.ozonelayer.Activator
+Export-Package: org.redvoodo.osgi.servlet.ozonelayer

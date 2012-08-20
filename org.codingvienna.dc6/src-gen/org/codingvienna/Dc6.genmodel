@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.codingvienna.dc6/src-gen" editDirectory="/org.codingvienna.dc6.edit/src"
+    editorDirectory="/org.codingvienna.dc6.editor/src" modelPluginID="org.codingvienna.dc6"
+    forceOverwrite="true" modelName="Dc6" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.codingvienna.dc6.edit"
+    editorPluginID="org.codingvienna.dc6.editor" runtimeVersion="2.8">
+  <genPackages prefix="Dc6" basePackage="org.codingvienna" disposableProviderFactory="true"
+      ecorePackage="Dc6.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dc6.ecore#//ColorEnum">
+      <genEnumLiterals ecoreEnumLiteral="Dc6.ecore#//ColorEnum/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="Dc6.ecore#//ColorEnum/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="Dc6.ecore#//ColorEnum/BLUE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dc6.ecore#//CornerEnum">
+      <genEnumLiterals ecoreEnumLiteral="Dc6.ecore#//CornerEnum/ROUNDED"/>
+      <genEnumLiterals ecoreEnumLiteral="Dc6.ecore#//CornerEnum/DEFAULT"/>
+    </genEnums>
+    <genClasses ecoreClass="Dc6.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dc6.ecore#//Model/canvas"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Canvas">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dc6.ecore#//Canvas/squares"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Square">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dc6.ecore#//Square/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dc6.ecore#//Square/squares"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Properties"/>
+    <genClasses ecoreClass="Dc6.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Color/color"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Corner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Corner/corner"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Location/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Location/y"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Caption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Caption/caption"/>
+    </genClasses>
+    <genClasses ecoreClass="Dc6.ecore#//Size">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Size/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dc6.ecore#//Size/height"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

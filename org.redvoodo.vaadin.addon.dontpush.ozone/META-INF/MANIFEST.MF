@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dontpush ozone
+Bundle-SymbolicName: org.redvoodo.vaadin.addon.dontpush.ozone
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: redVoodo.org
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.vaadin;bundle-version="6.7.6",
+ org.eclipse.jetty.websocket;bundle-version="8.1.0",
+ javax.servlet;bundle-version="3.0.0",
+ org.redvoodo.vaadin.addon.dontpush.ozone.jars;bundle-version="0.0.1",
+ org.atmosphere.atmosphere-compat-jbossweb;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-jetty;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-tomcat;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-tomcat7;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-compat-weblogic;bundle-version="0.8.6",
+ org.atmosphere.atmosphere-runtime;bundle-version="0.8.6"
+Export-Package: org.vaadin.dontpush.server,
+ org.vaadin.dontpush.widgetset,
+ org.vaadin.dontpush.widgetset.client
+Import-Package: org.atmosphere.cpr,
+ org.slf4j;version="1.6.1"
+Bundle-ClassPath: dontpush-addon-ozonelayer-0.4.5-SNAPSHOT.jar

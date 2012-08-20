@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: org.codingvienna.dc6.osgi.servlet.ozonelayer.fragment
+Bundle-Version: 0.0.1.qualifier
+Fragment-Host: org.redvoodo.osgi.servlet.ozonelayer;bundle-version="0.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

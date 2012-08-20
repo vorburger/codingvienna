@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Web
+Bundle-SymbolicName: org.codingvienna.dc6.bridge.web
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: org.codingvienna.dc6.bridge.web.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.codingvienna.dc6;bundle-version="0.0.1",
+ org.codingvienna.dc6.application;bundle-version="0.0.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.eclipse.emf.common.notify,
+ org.eclipse.emf.common.notify.impl,
+ org.eclipse.emf.ecore.resource,
+ org.eclipse.xtext.resource

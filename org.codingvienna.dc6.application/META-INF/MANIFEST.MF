@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Application area
+Bundle-SymbolicName: org.codingvienna.dc6.application
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: codingvienna.org
+Service-Component: OSGI-INF/vaadinMain.xml
+Require-Bundle: com.vaadin,
+ org.codingvienna.dc6;bundle-version="0.0.1",
+ org.redvoodo.vaadin.addon.dontpush.ozone;bundle-version="0.0.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Import-Package: javax.servlet,
+ javax.servlet.http,
+ org.osgi.service.component;version="1.1.0",
+ org.slf4j;version="1.6.1"
+Export-Package: org.codingvienna.dc6.application.facade

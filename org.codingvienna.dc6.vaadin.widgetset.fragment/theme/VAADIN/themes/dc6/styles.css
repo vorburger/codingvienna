@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import url(../reindeer/styles.css);
+
+.canvas {
+	background-color: #D0DCFF;
+}
+
+.square {
+	border: 1px solid;
+	-moz-box-shadow: inset -3px -3px 3px #777;
+	-webkit-box-shadow: inset -3px -3px 3px #777;
+	box-shadow: inset -3px -3px 3px #777;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+
+.square:hover {
+	background-color: #00FF33;
+}
+
+.square-caption {
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.corner_rounded {
+	border-radius: 16px;
+	-moz-border-radius: 16px;
+}
+
+.red {
+	background-color: #B4739E;
+}
+
+.red .h2{
+	color: white;
+}
+
+.blue {
+	background-color: #87A5E6;
+}
+
+.blue .h2{
+	color: white;
+}
+
+.green {
+	background-color: #FFE8CB;
+}
+
+.green .h2{
+	color: #707070;
+}

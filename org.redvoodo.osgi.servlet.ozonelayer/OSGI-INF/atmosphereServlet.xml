@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" enabled="true" immediate="false" name="org.redvoodo.osgi.servlet.atmosphere">
+   <implementation class="org.redvoodo.osgi.servlet.ozonelayer.AtmosphereServletFactory"/>
+   <service>
+      <provide interface="org.redvoodo.osgi.pushosgi.common.IServletFactory"/>
+   </service>
+</scr:component>

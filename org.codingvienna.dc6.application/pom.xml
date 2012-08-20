@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>org.codingvienna.samples.parent</artifactId>
+		<groupId>org.codingvienna.samples</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>org.codingvienna.dc6.application</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<name>Codingvienna :: Main application</name>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- VAADIN -->
+			<dependency>
+				<groupId>vaadin</groupId>
+				<artifactId>vaadin</artifactId>
+				<version>${vaadin.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.codingvienna.samples</groupId>
+				<artifactId>org.redvoodo.vaadin.addon.dontpush.ozone</artifactId>
+				<version>${current-version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+</project>
